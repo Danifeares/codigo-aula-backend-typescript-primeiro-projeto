@@ -1,4 +1,4 @@
-import { Router } from "express"
+import { Router } from "express" // Router é uma propriedade do express, para criação de rotas
 import {
     atualizarCarros,
     cadastrarCarros,
@@ -7,7 +7,7 @@ import {
     listarCarros
 } from './controladores/carros'
 
-const rotas = Router()
+const rotas = Router() // ao invés de instanciar o express(), instancio o Router(), que é uma propriedade do express
 
 rotas.get('/carros', listarCarros)
 rotas.get('/carros/:id', detalharCarros)
