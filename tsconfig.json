@@ -4,17 +4,17 @@
     "lib": ["ES2018"],
     "module": "commonjs",
     "moduleResolution": "node",
-    "typeRoots": [
+    "typeRoots": [ //indica qual pasta serão criados os tipos personalizados caso sejam necessários
       "./src/@types"
     ],
     "resolveJsonModule": true,
     "allowJs": true,
-    "outDir": "./dist",
+    "outDir": "./dist", // informa qual pasta será gerado o arquivo JS na transpilação (essa pasta dist fica no mesmo nível da pasta src, na raíz do projeto)
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitAny": true,
+    "forceConsistentCasingInFileNames": true, // cuida se os arquivos que serão acessados / importados / exportados estão com camelCase correto / caixa alta e caixa baixa correta, conforme arquivo original
+    "strict": true, // não permite falhas de tipagem, fica acusando erros quando elas existem
+    "noImplicitAny": true, // não permite que parâmetros de função fiquem como any
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"], // arquivos que meu ts config estará olhando, nesse caso todos os arquivos de dentro da pasta src!
+  "exclude": ["node_modules", "dist"] // arquivos que meu ts config NÃO IRÁ OLHAR, ele não precisa ler node_modules e nem a pasta dist
 }
