@@ -1,0 +1,16 @@
+"scripts": {
+    "dev": "nodemon --exec ts-node ./src/index.ts",
+    "build": "rmdir /s /q dist && tsc",
+    "start": "node ./dist/index.js"
+  }, 
+
+  --> o script dev roda o código em typescript, no ambiente de DESENVOLVIMENTO, pois nodemon e ts-node são configurados
+  como dependências de desenvolvimento nesse projeto! 
+
+  --> o script build está dessa forma para criar uma cópia do projeto todo em JS! o comando  
+  "rmdir /s /q dist && tsc", é do windows, mas se fosse sistema linux ou macOS poderíamos colocar "rm -rf ./dist && tsc"
+  Toda vez que esse script é rodado, esse comando remove a pasta dist se existir, 
+  e depois cria uma nova com o código mais recente desenvolvido. 
+
+  --> o script start roda o código transpilado para JS, roda em javascript, para ser usado em plataformas externas, deploys
+
